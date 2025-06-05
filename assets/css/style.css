@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, aqua, lightblue);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Adicionado padding para evitar que o container grude nas bordas em telas pequenas */
+}
+
+.container {
+  width: 100%; /* Ajustado para ocupar a largura total disponível */
+  max-width: 1200px; /* Definido um máximo razoável para a largura */
+  /* height: 1300px; Removido height fixo, o conteúdo definirá a altura */
+  border: 5px solid black;
+  padding: 20px;
+  position: relative;
+  background: #26c5d3;
+  display: flex; /* Usando flexbox para organizar o conteúdo verticalmente */
+  flex-direction: column; /* Coloca os itens em coluna */
+  gap: 20px; /* Espaçamento entre as seções */
+}
+
+.imagem-topo {
+  width: 200px;
+  height: 100px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto 20px auto; /* Centraliza a imagem no topo */
+}
+
+.imagem-topo img {
+  max-width: 100%; /* Garante que a imagem se ajuste ao seu container */
+  max-height: 100%;
+  object-fit: contain; /* Redimensiona a imagem para caber sem cortar */
+}
+
+.menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  padding: 10px 15px; /* Ajuste no padding para melhor visual */
+  border: 2px solid black;
+  background: #f8f8f8;
+  font-weight: bold; /* Deixa o texto do botão em negrito */
+}
+
+.funcionar {
+  border: 2px solid black;
+  padding: 15px; /* Aumentado um pouco o padding */
+  background: #f8f8f8;
+  text-align: center; /* Centraliza o texto */
+}
+
+.funcionar h2 {
+  margin-bottom: 10px;
+  color: #00796b;
+}
+
+.funcionar p {
+  color: #333;
+}
+
+.search-bar-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center; /* Centraliza a barra de pesquisa */
+}
+
+.search-bar-container input {
+  flex-grow: 1; /* Permite que o input cresça */
+  max-width: 400px; /* Define uma largura máxima para o input */
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.search-bar-container button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #00bcd4;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar-container button:hover {
+  background-color: #4f787d;
+}
+
+.jogos {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os jogos quebrem a linha */
+  justify-content: center; /* Centraliza os jogos quando há espaço */
+  gap: 25px; /* Espaçamento entre os jogos */
+  margin-top: 30px; /* Ajuste no espaçamento superior */
+}
+
+.jogo {
+  border: 2px solid black;
+  width: 380px; /* Largura padrão para cada jogo */
+  height: 250px; /* Altura padrão para cada jogo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: white;
+  transition: transform 0.2s;
+  overflow: hidden; /* Garante que a imagem não vaze */
+  flex-shrink: 0; /* Impede que os itens encolham */
+}
+
+.jogo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Ajusta a imagem para preencher o container, cortando se necessário */
+}
+
+.jogo:hover {
+  transform: scale(1.05);
+}
+
+.creative-section {
+  margin-top: 50px; /* Espaço após a seção anterior */
+  padding: 30px 20px; /* Aumentado o padding */
+  background: linear-gradient(to right, #e0f7fa, #b2ebf2);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.creative-section h2 {
+  color: #00796b;
+  margin-bottom: 10px; /* Ajustado espaçamento */
+  font-size: 2.2em;
+}
+
+.creative-section p {
+  color: #333;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.recommendation-cards {
+  display: flex;
+  justify-content: center; /* Centraliza os cards */
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Largura razoável para os cards */
+  min-width: 280px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex; /* Usando flexbox para organizar o conteúdo do card */
+  flex-direction: column; /* Coloca os itens do card em coluna */
+  justify-content: space-between; /* Distribui o espaço entre os elementos */
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  color: #009688;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+}
+
+.card p {
+  color: #535252;
+  font-size: 0.95em;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Permite que o parágrafo ocupe o espaço restante */
+}
+
+.btn {
+  display: inline-block;
+  background-color: #00bcd4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  align-self: flex-start; /* Alinha o botão ao início do card */
+}
+
+.btn:hover {
+  background-color: #4f787d;
+}
+
+.call-to-action {
+  font-size: 1.5em;
+  color: #00796b;
+  font-weight: bold;
+  margin-top: 20px;
+  padding-bottom: 20px; /* Adicionado padding na parte inferior */
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+  /* Ajustado o breakpoint para telas menores */
+  .container {
+    padding: 15px;
+  }
+  .menu {
+    top: 15px;
+    right: 15px;
+    padding: 8px 12px;
+  }
+  .imagem-topo {
+    width: 150px;
+    height: 75px;
+  }
+  .funcionar h2 {
+    font-size: 1.8em;
+  }
+  .funcionar p {
+    font-size: 1em;
+  }
+  .jogos {
+    flex-direction: column; /* Coloca os jogos em coluna em telas pequenas */
+    align-items: center; /* Centraliza os jogos */
+    gap: 20px;
+  }
+  .jogo {
+    width: 90%; /* Jogos ocupam quase toda a largura */
+    max-width: 350px; /* Largura máxima para jogos */
+    height: 200px;
+  }
+  .recommendation-cards {
+    flex-direction: column; /* Cartões de recomendação em coluna */
+    align-items: center;
+    gap: 20px;
+  }
+  .card {
+    width: 90%; /* Cards ocupam quase toda a largura */
+    max-width: 350px; /* Largura máxima para cards */
+  }
+  .creative-section h2 {
+    font-size: 1.8em;
+  }
+  .creative-section p {
+    font-size: 1em;
+  }
+  .call-to-action {
+    font-size: 1.2em;
+  }
+}

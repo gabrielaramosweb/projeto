@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogos para o Tédio</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/jogosfavicon.png"
+      type="image/x-icon"
+      /><link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="imagem-topo">
+        <img
+          src="./assets/imagem_um.png"
+          alt="Logo do Site Jogos para o Tédio"
+        /></div>
+
+      <button class="menu" onclick="playHihi()">Menu</button>
+
+      <div class="funcionar">
+        <h2>Apresentação dos Jogos</h2>
+        <p>Agradecimentos ao Ivan</p>
+      </div>
+
+      <div class="search-bar-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Pesquise por jogos..."
+        />
+        <button onclick="searchGames()">🔎</button>
+      </div>
+      <div class="jogos">
+        <div
+          class="jogo"
+          data-game-name="Joquempô"
+          onclick="abrirJogo('https://mrprince2099.github.io/projeto/')"
+        >
+          <img
+            src="./assets/joken_po.png"
+            alt="Imagem do Jogo Joquempô"
+          /></div>
+
+        <div
+          class="jogo"
+          data-game-name="Jogo da Forca"
+          onclick="abrirJogo('https://kodo-xeno.github.io/projetos/')"
+        >
+          <img
+            src="./assets/forca.png"
+            alt="Imagem do Jogo da Forca"
+          /></div>
+
+        <div
+          class="jogo"
+          data-game-name="Jogo do Inseto"
+          onclick="abrirJogo('https://matheusandreweb.github.io/projeto/')"
+        >
+          <img
+            src="./assets/jogo_inseto.png"
+            alt="Imagem do Jogo do Inseto"
+          /></div>
+      </div>
+
+      <div class="creative-section">
+        <h2>Não achou o que procurava?</h2>
+        <p>
+          Explore nossa seção de recomendações personalizadas ou descubra novos
+          gêneros!
+        </p>
+        <div class="recommendation-cards">
+          <div class="card">
+            <h3>Recomendações Diárias</h3>
+            <p>Sugestões baseadas nos seus jogos favoritos.</p>
+            <a href="#" class="btn">Ver Mais</a>
+          </div>
+
+          <div class="card">
+            <h3>Novos Lançamentos</h3>
+            <p>Fique por dentro das últimas novidades do mundo dos jogos.</p>
+            <a href="#" class="btn">Conferir</a>
+          </div>
+
+          <div class="card">
+            <h3>Jogos Clássicos</h3>
+            <p>Reviva a nostalgia com os títulos que marcaram época.</p>
+            <a href="#" class="btn">Explorar</a>
+          </div>
+        </div>
+
+        <p class="call-to-action">Sua jornada de diversão começa aqui!</p>
+      </div>
+
+      <audio id="hihi-audio" src="./assets/audio do michael jackson 1.mp3"></audio>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
